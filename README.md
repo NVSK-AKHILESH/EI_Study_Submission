@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple console-based To-Do List Manager written in Python. The program allows users to manage their tasks, mark them as completed, and organize them based on priorities and due dates. It includes features such as undo, sorting tasks, and filtering tasks by completion status.
+This is a simple console-based To-Do List Manager written in Python. The program allows users to manage their tasks, mark them as completed, and organize them based on priorities and due dates. It includes features such as undo, sorting tasks based on priorities and due dates, and filtering tasks by completion status.
 
 ## Features
 
@@ -27,7 +27,7 @@ This is a simple console-based To-Do List Manager written in Python. The program
 ## Usage
 
 1. **Add Task:**
-   - Enter task details, including description, due date, tags, priority, and reminder (optional).
+   - Enter task details, including description, due date, tags, priority, and reminder.
 
 2. **Mark Completed:**
    - Mark a task as completed by entering the task description.
@@ -59,6 +59,6 @@ This is a simple console-based To-Do List Manager written in Python. The program
 
 ## Contributors
 
-- [Your Name]
+- [NVSK Akhilesh]
 
-Feel free to customize this information based on any additional features or specific details about your implementation. This README file serves as a guide for users to understand and interact with your To-Do List Manager.
+Feel free to customize this information based on any additional features or specific details about the implementation. This README file serves as a guide for users to understand and interact with To-Do List Manager.
