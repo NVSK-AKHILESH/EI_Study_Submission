@@ -1,3 +1,4 @@
+from getpass import getpass
 from datetime import datetime, timedelta
 import logging
 
@@ -137,8 +138,22 @@ class TaskManager:
 # Logging Mechanism
 logging.basicConfig(filename='todo.log', level=logging.INFO)
 
+# User Authentication
+def authenticate_user():
+    while True:
+        username = input("Enter your username: ")
+        password = getpass("Enter your password: ")  # using getpass to hide password input
+        # Simple hardcoded username and password for demonstration
+        if username == "Akhilesh" and password == "Nvsk2003":
+            print("Login successful!")
+            break
+        else:
+            print("Invalid username or password. Please try again.")
+
 # Exception Handling Mechanism
 try:
+    # Perform user authentication before entering the main loop
+    authenticate_user()
     manager = TaskManager()
 
     while True:
