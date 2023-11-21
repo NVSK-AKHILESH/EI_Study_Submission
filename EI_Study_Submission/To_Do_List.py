@@ -56,8 +56,6 @@ class Item:
         self.reminder = datetime.strptime(reminder, '%Y-%m-%d %I:%M %p') if reminder else None
 
     def display(self):
-        print("Task   Status       Priority       Due_date               Reminder")
-        print("*"*90)
         status = "Completed" if self.completed else "Pending"
         priority_str = f", Priority: {self.priority}" if self.priority else ""
         due_date_str = f", Due: {self.due_date.strftime('%Y-%m-%d %I:%M %p')}" if self.due_date else ""
@@ -210,6 +208,8 @@ try:
                 if not items_to_display:
                     print("The list is empty.")
                 else:
+                    print("Task   Status       Priority       Due_date               Reminder")
+                    print("*" * 90)
                     for item in items_to_display:
                         print(item.display())
         elif choice == '5':
