@@ -120,7 +120,7 @@ class TaskManager:
         return sorted(self.items, key=lambda x: x.due_date)
 
     def undo(self):
-        if len(self.history) > 1:
+        if len(self.history) >= 1:
             self.history.pop()
             self.items = self.history[-1].get_state()
 
@@ -201,9 +201,19 @@ try:
             if filter_type == 'completed':
                 if not items_to_display:
                     print("There are no completed tasks in the list.")
+                else:
+                    print("Task   Status       Priority       Due_date               Reminder")
+                    print("*" * 90)
+                    for item in items_to_display:
+                        print(item.display())
             elif filter_type == 'pending':
                 if not items_to_display:
                     print("There are no pending tasks in the list.")
+                else:
+                    print("Task   Status       Priority       Due_date               Reminder")
+                    print("*" * 90)
+                    for item in items_to_display:
+                        print(item.display())
             else:
                 if not items_to_display:
                     print("The list is empty.")
@@ -222,6 +232,8 @@ try:
                 print(item.display())
         elif choice == '7':
             manager.undo()
+            if not manager.view_items():
+                print("The list is empty.")
         elif choice == '8':
             break
         else:
