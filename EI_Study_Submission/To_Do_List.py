@@ -232,8 +232,6 @@ try:
                 print(item.display())
         elif choice == '7':
             manager.undo()
-            if not manager.view_items():
-                print("The list is empty.")
         elif choice == '8':
             print("The best preparation for tomorrow is doing your best today")
             print("Have a nice day :)")
